@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="de"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no">
+<title>Satzung – Förderverein KiZ 96</title>
+<meta name="description" content="Satzung des Fördervereins des Kinderzentrums in den Schafgärten (Förderverein KT Li-La-Luna e.V.) – Name und Sitz, Zweck, Mitgliedschaft, Organe, Mitgliederversammlung, Vorstand, Beiträge und Schlussbestimmungen.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap">
+<style>
+  :root {
+    --yellow: #FFDA29;
+    --yellow-bg: #FFE94A;
+    --blue: #1B2C9C;
+    --blue-deep: #14216E;
+    --ink: #1F2433;
+    --ink-soft: #4A5168;
+    --paper: #FFFDF6;
+    --line: #E9E2C7;
+    --maxw: 1100px;
+    --readw: 680px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Poppins', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 { color: var(--blue); margin: 0 0 0.4em; line-height: 1.0; letter-spacing: 0.005em; font-family: 'Caveat Brush', 'Poppins', cursive; font-weight: 400; }
+  p { margin: 0 0 1em; color: var(--ink-soft); max-width: var(--readw); }
+  p strong { color: var(--ink); font-weight: 600; }
+  a { color: var(--blue); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+  a:hover { color: var(--blue-deep); }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+  /* ---------- Nav ---------- */
+  nav.top {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255, 253, 246, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; padding-bottom: 14px; gap: 24px; }
+  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .brand-text { font-family: 'Caveat Brush', cursive; font-size: 28px; color: var(--blue); line-height: 1; letter-spacing: 0.01em; }
+  .brand-text small { display: block; font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); margin-top: 4px; font-weight: 500; }
+  nav.top a.navlink { color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.01em; white-space: nowrap; }
+  nav.top a.navlink:hover { color: var(--blue); }
+
+  /* ---------- Kopfbereich ---------- */
+  .doc-head {
+    position: relative;
+    padding: 56px 0 64px;
+    overflow: hidden;
+    background: var(--yellow-bg);
+  }
+  .doc-head .wrap { position: relative; z-index: 1; }
+  .eyebrow {
+    font-family: 'Caveat Brush', cursive;
+    color: var(--blue);
+    font-size: 30px;
+    margin-bottom: 4px;
+    letter-spacing: 0.01em;
+  }
+  .doc-head h1 {
+    font-size: clamp(44px, 7vw, 76px);
+    max-width: 18ch;
+    margin-bottom: 16px;
+    line-height: 0.95;
+  }
+  .doc-head p { color: var(--ink); max-width: 620px; margin-bottom: 0; }
+  .doc-head .stand {
+    display: inline-block;
+    margin-top: 20px;
+    background: rgba(255,253,246,0.85);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--blue-deep);
+    letter-spacing: 0.02em;
+  }
+  .wave { display: block; width: 100%; height: 60px; }
+
+  /* ---------- Inhaltsübersicht ---------- */
+  .toc { margin-top: 28px; }
+  .toc h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+  .toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: none;
+  }
+  .toc li { margin: 0; padding-left: 0; }
+  .toc li::before { display: none; }
+  .toc a {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+  .toc a:hover { border-color: var(--blue); color: var(--blue); }
+
+  /* ---------- Dokument ---------- */
+  .doc { padding: 20px 0 90px; }
+  .doc .wrap { max-width: 820px; }
+  .doc section { margin-top: 48px; scroll-margin-top: 90px; }
+  .doc section:first-of-type { margin-top: 24px; }
+  .doc h2 {
+    font-size: 38px;
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .doc h2 .num {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    background: var(--yellow);
+    border-radius: 999px;
+    height: 30px;
+    padding: 0 13px;
+    display: inline-grid; place-items: center;
+    flex-shrink: 0;
+    color: var(--blue-deep);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  .doc ul { margin: 0 0 1em; padding: 0; list-style: none; max-width: var(--readw); }
+  .doc ul li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 8px;
+    color: var(--ink-soft);
+  }
+  .doc ul li::before {
+    content: '';
+    position: absolute;
+    left: 4px; top: 11px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--yellow);
+    box-shadow: 0 0 0 2px rgba(27,44,156,0.18);
+  }
+  .doc ol {
+    counter-reset: item;
+    list-style: none;
+    margin: 0 0 1em;
+    padding: 0;
+    max-width: var(--readw);
+  }
+  .doc ol > li {
+    counter-increment: item;
+    position: relative;
+    padding-left: 38px;
+    margin-bottom: 14px;
+    color: var(--ink-soft);
+  }
+  .doc ol > li::before {
+    content: counter(item);
+    position: absolute;
+    left: 0; top: 4px;
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--blue-deep);
+    font-size: 12.5px;
+    font-weight: 600;
+    line-height: 1;
+    display: grid; place-items: center;
+    box-shadow: 0 0 0 2px rgba(27,44,156,0.10);
+  }
+  .doc ol ul { margin: 10px 0 0; }
+  .doc ol ul li:last-child { margin-bottom: 0; }
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 26px 28px;
+    max-width: var(--readw);
+  }
+  .card p:last-child, .card ul:last-child, .card ol:last-child { margin-bottom: 0; }
+  .backlink { display: inline-block; margin-top: 56px; font-size: 15px; }
+
+  /* ---------- Footer / Impressum ---------- */
+  footer {
+    background: var(--blue-deep);
+    color: rgba(255,255,255,0.75);
+    padding: 64px 0 40px;
+    font-size: 14px;
+  }
+  footer h4 {
+    font-family: 'Caveat Brush', cursive;
+    color: var(--yellow);
+    font-size: 32px;
+    margin: 0 0 14px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+  footer .imp-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 40px; }
+  @media (max-width: 760px) { footer .imp-grid { grid-template-columns: 1fr; gap: 28px; } }
+  footer p { color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.7; }
+  footer a { color: var(--yellow); }
+  footer .legal { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.15); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13px; color: rgba(255,255,255,0.55); }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 640px) {
+    .wrap { padding: 0 20px; }
+    .brand-text { font-size: 22px; }
+    .brand-text small { font-size: 9.5px; letter-spacing: 0.12em; margin-top: 3px; }
+    .doc-head { padding: 36px 0 44px; }
+    .doc-head h1 { font-size: clamp(34px, 9vw, 48px); }
+    .eyebrow { font-size: 24px; }
+    .wave { height: 32px; }
+    .doc { padding: 10px 0 60px; }
+    .doc section { margin-top: 38px; }
+    .doc h2 { font-size: 30px; gap: 10px; }
+    .toc h2 { font-size: 24px; }
+    .card { padding: 22px 20px; }
+    footer { padding: 50px 0 30px; }
+  }
+
+  /* Skip-link a11y */
+  .skip { position: absolute; left: -9999px; }
+  .skip:focus { left: 12px; top: 12px; background: var(--blue); color: #fff; padding: 8px 14px; border-radius: 6px; z-index: 100; }
+
+  @media print {
+    nav.top, .wave, .backlink, .toc { display: none; }
+    body { font-size: 12pt; background: #fff; }
+    .doc-head { background: #fff; padding: 0 0 24px; }
+    .doc section { break-inside: avoid; }
+    footer { background: #fff; color: #333; padding: 24px 0 0; }
+    footer h4, footer a { color: #14216E; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip">Zum Inhalt springen</a>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <div class="brand-text">
+        Förderverein KiZ 96
+        <small>Förderverein des Kinderzentrums in den Schafgärten</small>
+      </div>
+    </a>
+    <a class="navlink" href="index.html">← Zur Startseite</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<div class="doc-head">
+  <div class="wrap">
+    <div class="eyebrow">Unsere Grundlage</div>
+    <h1>Satzung des Fördervereins</h1>
+    <p>des Kinderzentrums in den Schafgärten (Förderverein KT Li-La-Luna e.V.)</p>
+    <span class="stand">Stand: Januar 2016</span>
+  </div>
+</div>
+
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 30 Q 180 0 360 25 T 720 25 T 1080 25 T 1440 20 L 1440 0 L 0 0 Z" fill="#FFE94A"></path>
+</svg>
+
+<div class="doc">
+  <div class="wrap">
+
+    <nav class="toc" aria-label="Inhaltsübersicht">
+      <h2>Inhalt</h2>
+      <ul>
+        <li><a href="#p1">§ 1 Name und Sitz</a></li>
+        <li><a href="#p2">§ 2 Zweck des Vereins</a></li>
+        <li><a href="#p3">§ 3 Mitgliedschaft</a></li>
+        <li><a href="#p4">§ 4 Organe des Vereins</a></li>
+        <li><a href="#p4a">§ 4a Verwendung der Mittel</a></li>
+        <li><a href="#p5">§ 5 Mitgliederversammlung</a></li>
+        <li><a href="#p6">§ 6 Vorstand</a></li>
+        <li><a href="#p7">§ 7 Verwaltung, Beiträge</a></li>
+        <li><a href="#p8">§ 8 Schlussbestimmungen</a></li>
+      </ul>
+    </nav>
+
+    <section id="p1">
+      <h2><span class="num">§ 1</span> Name und Sitz</h2>
+      <ol>
+        <li>Der Verein führt den Namen „Förderverein KT Li-La-Luna“.</li>
+        <li>Sitz des Vereins ist 60437 Frankfurt am Main, In den Schafgärten 23.</li>
+        <li>Der Verein wird in das Vereinsregister eingetragen und wird den Zusatz „e.V.“ führen.</li>
+      </ol>
+    </section>
+
+    <section id="p2">
+      <h2><span class="num">§ 2</span> Zweck des Vereins</h2>
+      <ol>
+        <li>Der Verein verfolgt ausschließlich und unmittelbar gemeinnützige Zwecke im Sinne des Abschnitts „Steuerbegünstigte Zwecke“ der Abgabenordnung. Zweck des Vereins ist die Förderung der Jugendhilfe sowie die Förderung der Erziehung.</li>
+        <li>Der Satzungszweck wird unmittelbar verwirklicht insbesondere durch
+          <ul>
+            <li>Organisation von Vorträgen und Veranstaltungen (entsprechend dem Vereinszweck)</li>
+            <li>Unterstützung des Elternbeirates des Kinderzentrums in den Schafgärten, Frankfurt am Main-Harheim,</li>
+            <li>Aktivierung von Personen, die an den Belangen der Kindertagesstätte interessiert sind.</li>
+          </ul>
+        </li>
+        <li>Der Satzungszweck wird daneben mittelbar verwirklicht durch die Beschaffung und Weiterleitung von Mitteln zur Förderung der Jugendhilfe, der Erziehung und der Volksbildung durch eine Körperschaft des öffentlichen Rechts im Sinne des § 58 Abs. 1 AO. Der Zweck wird verwirklicht durch das Erheben von Mitgliedsbeiträgen und das Einwerben von Spenden.</li>
+        <li>Der Verein ist selbstlos tätig; er verfolgt nicht in erster Linie eigenwirtschaftliche Zwecke.</li>
+        <li>Mittel des Vereins dürfen nur für die satzungsmäßigen Zwecke verwendet werden. Die Mitglieder erhalten keine Zuwendungen aus Mitteln des Vereins.</li>
+        <li>Es darf keine Person durch Ausgaben, die dem Zweck des Vereins fremd sind, oder durch unverhältnismäßig hohe Vergütungen begünstigt werden.</li>
+        <li>Der Verein ist politisch und konfessionell nicht gebunden.</li>
+      </ol>
+    </section>
+
+    <section id="p3">
+      <h2><span class="num">§ 3</span> Mitgliedschaft</h2>
+      <ol>
+        <li>Mitglieder des Vereins können alle natürlichen und juristischen Personen sowie Gebietskörperschaften werden, die die Ziele des Vereins unterstützen.</li>
+        <li>Der Eintritt in den Verein erfolgt auf Grund eines schriftlichen Antrages.</li>
+        <li>Über die Aufnahme entscheidet der Vorstand. Bei Ablehnung steht dem Betroffenen zu, eine Entscheidung der Mitgliederversammlung zu verlangen. Diese entscheidet endgültig.</li>
+        <li>Die Mitgliedschaft endet durch Austritt, Ausschluss oder Tod.</li>
+        <li>Der Austritt aus dem Verein ist durch eine schriftliche Austrittserklärung mit einer Frist von einem Monat zum Jahresende möglich.</li>
+        <li>Mitglieder des Vereins, die ihren Verpflichtungen gegenüber dem Verein nicht nachkommen oder das Ansehen des Vereins schädigen, können durch Vorstandsbeschluss aus dem Verein ausgeschlossen werden. Den Betroffenen steht die Berufung zur Mitgliederversammlung zu. Diese entscheidet endgültig.</li>
+        <li>Mitglieder des Vereins, die sich besonders um die Förderung des „Fördervereins Li-La-Luna“ verdient gemacht haben, können durch den Vorstand zu Ehrenmitgliedern ernannt werden.</li>
+      </ol>
+    </section>
+
+    <section id="p4">
+      <h2><span class="num">§ 4</span> Organe des Vereins</h2>
+      <div class="card">
+        <p>Organe des Vereins sind</p>
+        <ul>
+          <li>die Mitgliederversammlung</li>
+          <li>der Vorstand</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="p4a">
+      <h2><span class="num">§ 4a</span> Verwendung der Mittel</h2>
+      <p>Über die Verwendung der Mittel entscheidet die Mitgliederversammlung.</p>
+    </section>
+
+    <section id="p5">
+      <h2><span class="num">§ 5</span> Mitgliederversammlung</h2>
+      <ol>
+        <li>Die Mitgliederversammlung ist das oberste Organ des Vereins und in allen Angelegenheiten zuständig, für die nicht in der Satzung oder durch Beschluss der Mitgliederversammlung die Zuständigkeit eines anderen Vereinsorgans begründet ist.</li>
+        <li>Eine ordentliche Mitgliederversammlung findet einmal im Kalenderjahr statt. Sie wird vom Vorstand einberufen. Die Einberufung muss mit der Tagesordnung mindestens 4 Wochen vor der Mitgliederversammlung erfolgen. Die Einladung nebst Tagesordnung werden per E-Mail versandt; sofern ein Mitglied über keine E-Mail-Adresse verfügt, auf dem Postweg. Für eine wirksame Einberufung ist die Versendung der Einladung an die zuletzt bekannte E-Mail-Adresse oder, sofern ein Mitglied über keine E-Mail-Adresse verfügt, unter der zuletzt bekannten Postanschrift ausreichend. Darüber hinaus ist die Einladung am Infobrett im Kinderzentrum 96, In den Schafgärten 23, 60437 Frankfurt auszuhängen. Zusätzliche Versammlungen können einberufen werden, wenn der Vorstand es beschließt, oder wenn mindestens 10 % der Mitglieder unter der Angabe des Gegenstandes der Beschlussfassung die Einberufung beantragen. In dringenden Fällen kann die Mitgliederversammlung innerhalb von 3 Tagen einberufen werden.</li>
+        <li>Die Mitgliederversammlung ist beschlussfähig, wenn sie nach Maßgabe des § 5 Ziff. 2 einberufen worden ist. Jedes Mitglied hat eine Stimme. Die Beschlussfähigkeit für satzungsändernde Beschlüsse setzt zusätzlich zum Vorstand die Anwesenheit von mindestens 3 Mitgliedern voraus.</li>
+        <li>Satzungsändernde Beschlüsse der Mitgliederversammlung, auch soweit sie die Vereinsaufgaben betreffen, bedürfen einer ¾ Mehrheit der abgegebenen Stimmen. Die übrigen Beschlüsse werden mit einfacher Mehrheit der abgegebenen Stimmen gefasst. Stimmberechtigt sind Mitglieder, die das 16. Lebensjahr vollendet haben.</li>
+        <li>Das Protokoll der Mitgliederversammlung ist vom Vorsitzenden und von einem weiteren Vorstandsmitglied zu unterzeichnen und vom Vorstand zu verwahren.</li>
+        <li>Der vom Vorstand vorgelegte Jahresabschluss ist mit einfacher Mehrheit zu beschließen.</li>
+        <li>Die Mitgliederversammlung ernennt die Kassenprüfer. Diese legen auf der jeweils nächstfolgenden ordentlichen Mitgliederversammlung einen Kassenprüfungsbericht vor. Auf Antrag der Kassenprüfer entscheidet die Versammlung über den vorgelegten Jahresabschluss und die Entlastung des Vorstands.</li>
+      </ol>
+    </section>
+
+    <section id="p6">
+      <h2><span class="num">§ 6</span> Vorstand</h2>
+      <ol>
+        <li>Der Vorstand setzt sich zusammen aus:
+          <ul>
+            <li>dem geschäftsführenden Vorstand im Sinne des § 26 BGB, nämlich dem 1. Vorsitzenden, dem stellvertretenden Vorsitzenden,</li>
+            <li>sowie dem erweiterten Vorstand im Sinne dieser Satzung, nämlich mindestens einem, höchstens fünf Beisitzern; der erste Beisitzer ist zugleich Kassenwart.</li>
+          </ul>
+        </li>
+        <li>Der Vorstand im Sinne des § 26 BGB führt die Geschäfte des Vereins und vertritt ihn sowohl gerichtlich als auch außergerichtlich. Seine Mitglieder sind im Außenverhältnis allein vertretungsberechtigt.</li>
+        <li>Alle Mitglieder des Vorstandes werden für die Dauer von zwei Jahren von der Mitgliederversammlung gewählt. Die Mitglieder des geschäftsführenden Vorstandes gelten als gewählt, wenn sie die einfache Mehrheit auf sich vereinen. Bei den übrigen Mitgliedern des Vorstandes gilt als gewählt, wer die meisten Stimmen erhalten hat.</li>
+        <li>Die Wiederwahl der Vorstandsmitglieder ist zulässig.</li>
+        <li>Vorstandssitzungen finden nach Bedarf statt. Die Einladung erfolgt schriftlich oder in dringenden Fällen mündlich (telefonisch) durch den Vorstandsvorsitzenden oder dessen Vertretung.</li>
+        <li>Der Vorstand ist beschlussfähig, wenn in einer Sitzung mindestens der erste Vorsitzende oder der stellvertretende Vorsitzende sowie ein weiteres Vorstandsmitglied anwesend sind. Die Beschlussfassung erfolgt mit einfacher Stimmenmehrheit. Bei Stimmengleichheit gilt ein Antrag als abgelehnt.</li>
+      </ol>
+    </section>
+
+    <section id="p7">
+      <h2><span class="num">§ 7</span> Verwaltung, Beiträge</h2>
+      <ol>
+        <li>Die Tätigkeit im Verein und seinen Organen ist ehrenamtlich.</li>
+        <li>Das Geschäftsjahr ist das Kalenderjahr.</li>
+        <li>Es wird ein Mitgliedsbeitrag
+          <ul>
+            <li>bei natürlichen Personen von 15 EURO</li>
+            <li>bei Firmen, juristischen Personen sowie Körperschaften des öffentlichen Rechts von 50 EURO</li>
+          </ul>
+          pro Geschäftsjahr erhoben.
+        </li>
+        <li>Zur Erfüllung der Zwecke des Vereins ist der Beitrag innerhalb des ersten Quartals eines Kalenderjahres zu entrichten.</li>
+        <li>Der Beitrag vermindert sich im Jahr des Eintritts um die Hälfte, wenn der Eintritt nach dem 30.06. erfolgt.</li>
+        <li>Der geschäftsführende Vorstand wird ermächtigt, in einzelnen Fällen einen von den Regelungen des § 7 abweichenden Beitrag festzusetzen, wenn dies den Zielen des Vereins förderlich ist.</li>
+      </ol>
+    </section>
+
+    <section id="p8">
+      <h2><span class="num">§ 8</span> Schlussbestimmungen</h2>
+      <ol>
+        <li>Die Auflösung des Vereins ist nur auf einer für diesen Zweck einzuberufenden Mitgliederversammlung festgelegt. Sie erfordert eine ¾ Mehrheit der anwesenden stimmberechtigten Mitglieder.</li>
+        <li>Bei der Aufhebung oder Auflösung des Vereins oder bei Wegfall steuerbegünstigter Zwecke fällt das Vermögen des Vereins nach Einwilligung durch das zuständige Finanzamt an die Kindertagesstätte bzw. deren Träger, die es unmittelbar und ausschließlich für gemeinnützige Zwecke gem. § 2 Nr. 1 dieser Satzung zu verwenden haben.</li>
+        <li>Erfüllungsort und Gerichtsstand ist der Sitz des Vereins.</li>
+      </ol>
+    </section>
+
+    <a class="backlink" href="index.html">← Zurück zur Startseite</a>
+
+  </div>
+</div>
+
+</main>
+
+<!-- ============ FOOTER / IMPRESSUM ============ -->
+<footer id="impressum">
+  <div class="wrap">
+    <div class="imp-grid">
+      <div>
+        <h4>Förderverein KiZ 96</h4>
+        <p>Wir machen besondere Erlebnisse für die Kinder des Kinderzentrums 96 möglich – durch Mitgliedsbeiträge, Spenden und das Engagement vieler Familien.</p>
+        <p style="margin-top: 16px;"><a href="mailto:foerderverein.kiz96@gmail.com">foerderverein.kiz96@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Impressum</h4>
+        <p>
+          Förderverein Kita Li La Luna e.V.<br>
+          In den Schafgärten 23<br>
+          60437 Frankfurt am Main
+        </p>
+        <p style="margin-top: 12px;">
+          Vertreten durch den Vorstand:<br>
+          Isabelle Stellwag (1. Vorsitzende)<br>
+          Sarah Brabsche (2. Vorsitzende)<br>
+          Constanze Schill (Kassenwartin)
+        </p>
+        <p style="margin-top: 12px; font-size: 13px; color: rgba(255,255,255,0.55);">
+          Vereinsregister-Nr.: VR 12192<br>
+          Registergericht: Amtsgericht Frankfurt am Main
+        </p>
+        <p style="margin-top: 12px; font-size: 13px;">
+          <a href="satzung.html">📄 Satzung des Fördervereins KiZ 96</a><br>
+          <a href="datenschutz.html">🔒 Datenschutzhinweise</a>
+        </p>
+      </div>
+      <div>
+        <h4>Bankverbindung</h4>
+        <p style="font-family: ui-monospace, monospace; font-size: 13px; line-height: 1.9;">
+          Förderverein Kita Li La Luna e.V.<br>
+          IBAN: DE16 5019 0000 6001 1012 67<br>
+          BIC: FFVBDEFF<br>
+          Frankfurter Volksbank
+        </p>
+      </div>
+    </div>
+
+    <div class="legal">
+      <span>© <span id="year"></span> Förderverein KiZ 96 e.V. – Alle Rechte vorbehalten.</span>
+      <span>Inhaltlich verantwortlich: Vorstand des Fördervereins</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body></html>
