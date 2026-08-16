@@ -7,70 +7,15 @@
 <meta name="description" content="Der Förderverein des Kinderzentrums 96 unterstützt Projekte, die den Kita-Alltag bunter machen – von Zirkuswochen bis Musikmobil.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&amp;family=Patrick+Hand&amp;family=Permanent+Marker&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
 <style>
-  :root {
-    /* Flyer-nahe Farben: kräftiges Sonnengelb + sattes Royalblau */
-    --yellow: #FFDA29;
-    --yellow-soft: #FFE76B;
-    --yellow-bg: #FFE94A;     /* flächiges Flyer-Gelb */
-    --yellow-bg-soft: #FFF4B8;/* etwas weicher für Lesbarkeit */
-    --blue: #1B2C9C;
-    --blue-deep: #14216E;
-    --blue-soft: #4F6BD6;
-    --ink: #1F2433;
-    --ink-soft: #4A5168;
-    --paper: #FFFDF6;
-    --line: #E9E2C7;
-    --maxw: 1100px;
-    --readw: 680px;
-  }
-
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: 'Poppins', system-ui, sans-serif;
-    font-size: 17px;
-    line-height: 1.7;
-    color: var(--ink);
-    background: var(--paper);
-    -webkit-font-smoothing: antialiased;
-  }
-
-  h1, h2, h3 { color: var(--blue); margin: 0 0 0.4em; line-height: 1.0; letter-spacing: 0.005em; font-family: 'Caveat Brush', 'Poppins', cursive; font-weight: 400; }
-  h2 { font-size: clamp(44px, 6vw, 72px); }
+  /* Nur Startseiten-spezifische Regeln – Basis siehe styles.css */
+  h2 { font-size: clamp(44px, 6vw, 72px); max-width: 22ch; }
   h3 { font-size: 32px; }
-  .hand { font-family: 'Caveat Brush', cursive; color: var(--blue); font-weight: 400; }
-
-  p { margin: 0 0 1em; color: var(--ink-soft); max-width: var(--readw); }
-  p strong { color: var(--ink); font-weight: 600; }
-  a { color: var(--blue); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
-  a:hover { color: var(--blue-deep); }
-
-  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
 
   /* ---------- Nav ---------- */
-  nav.top {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(255, 253, 246, 0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--line);
-  }
-  nav.top .wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; padding-bottom: 14px; gap: 24px; }
-  .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .brand-mark {
-    width: 40px; height: 40px; border-radius: 50%;
-    background: var(--yellow);
-    display: grid; place-items: center;
-    font-family: 'Caveat Brush', cursive; font-size: 22px; color: var(--blue);
-    flex-shrink: 0;
-  }
-  .brand-text { font-family: 'Caveat Brush', cursive; font-size: 28px; color: var(--blue); line-height: 1; letter-spacing: 0.01em; }
-  .brand-text small { display: block; font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); margin-top: 4px; font-weight: 500; }
   nav.top ul { display: flex; gap: 28px; list-style: none; padding: 0; margin: 0; }
-  nav.top a.navlink { color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.01em; }
-  nav.top a.navlink:hover { color: var(--blue); }
   @media (max-width: 760px) { nav.top ul { display: none; } }
 
   /* ---------- Hero ---------- */
@@ -119,8 +64,6 @@
   .btn-primary:hover { background: var(--blue-deep); color: #fff; transform: translateY(-1px); }
   .btn-secondary { background: var(--yellow); color: var(--blue-deep); }
   .btn-secondary:hover { background: #FFC700; color: var(--blue-deep); transform: translateY(-1px); }
-  .btn-ghost { color: var(--blue); border-color: var(--blue); }
-  .btn-ghost:hover { background: var(--blue); color: #fff; }
 
   /* ---------- Sections ---------- */
   section { padding: 90px 0; position: relative; }
@@ -128,19 +71,9 @@
   section.alt .stat-card,
   section.alt .project { background: #FFFDF6; border-color: rgba(0,0,0,0.06); }
   section.alt .panel { border-color: rgba(0,0,0,0.06); }
-  .eyebrow {
-    font-family: 'Caveat Brush', cursive;
-    color: var(--blue);
-    font-size: 30px;
-    margin-bottom: 4px;
-    letter-spacing: 0.01em;
-  }
-  /* h2 base oben gesetzt */
-  h2 { max-width: 22ch; }
 
   /* Wave divider */
   .wave { display: block; width: 100%; height: 60px; }
-  .wave + section { padding-top: 30px; }
 
   /* ---------- Über uns ---------- */
   .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; align-items: start; }
@@ -148,7 +81,7 @@
   .stat-card {
     background: var(--paper);
     border: 1px solid var(--line);
-    border-radius: 18px;
+    border-radius: 32px;
     padding: 28px;
   }
   .stat-card + .stat-card { margin-top: 16px; }
@@ -166,7 +99,7 @@
   @media (max-width: 760px) { .projects { grid-template-columns: 1fr; } }
   .project {
     background: var(--paper);
-    border-radius: 22px;
+    border-radius: 32px;
     overflow: hidden;
     border: 1px solid var(--line);
     display: flex; flex-direction: column;
@@ -177,19 +110,8 @@
     position: relative;
     display: grid; place-items: center;
   }
-  .project-img.blue { background: repeating-linear-gradient(45deg, #C5D2F2, #C5D2F2 10px, #A6B7E8 10px, #A6B7E8 20px); }
   .project-img.has-photo { background: none; padding: 0; }
   .project-img.has-photo img { width: 100%; height: 100%; object-fit: cover; display: block; position: absolute; inset: 0; }
-  .project-img.has-photo { position: relative; }
-  .project-img .placeholder-tag {
-    background: rgba(255,255,255,0.92);
-    color: var(--ink-soft);
-    font-family: ui-monospace, monospace;
-    font-size: 11px;
-    padding: 6px 10px;
-    border-radius: 6px;
-    letter-spacing: 0.04em;
-  }
   .project-body { padding: 24px 26px 28px; }
   .project h3 { font-family: 'Caveat Brush', cursive; color: var(--blue); font-size: 36px; font-weight: 400; margin-bottom: 8px; line-height: 1.0; }
   .project p { font-size: 16px; margin: 0; }
@@ -199,7 +121,7 @@
   @media (max-width: 800px) { .duo { grid-template-columns: 1fr; } }
   .panel {
     background: var(--paper);
-    border-radius: 22px;
+    border-radius: 32px;
     padding: 40px;
     border: 1px solid var(--line);
   }
@@ -266,36 +188,6 @@
     .iban-qr img { width: 148px; }
   }
 
-  /* ---------- Vorstand ---------- */
-  .vorstand-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 32px;
-    max-width: 720px;
-    margin: 40px 0 56px;
-  }
-  .vorstand-card { text-align: center; }
-  .vorstand-photo {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 16px;
-    background: var(--cream);
-    border: 3px solid #fff;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 36px;
-    font-weight: 600;
-    color: var(--blue);
-  }
-  .vorstand-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .vorstand-card h4 { font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 600; margin: 0 0 4px; color: var(--ink); }
-  .vorstand-card .role { font-size: 14px; color: var(--ink-soft); margin: 0; }
-
   /* ---------- Sponsors ---------- */
   .sponsor-grid {
     display: grid;
@@ -316,16 +208,8 @@
   }
   .sponsor-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
   .sponsor-card img { max-width: 100%; max-height: 100%; object-fit: contain; }
-  .sponsor-card .placeholder-tag {
-    background: var(--cream);
-    color: var(--ink-soft);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    padding: 8px 14px;
-    border-radius: 6px;
-  }
 
+  /* ---------- Mitglied werden: Schritte ---------- */
   .steps { list-style: none; padding: 0; margin: 24px 0 0; counter-reset: step; }
   .steps li {
     padding: 14px 0 14px 48px;
@@ -351,7 +235,7 @@
   .contact-card {
     background: var(--paper);
     border: 1px solid var(--line);
-    border-radius: 18px;
+    border-radius: 32px;
     padding: 28px 30px;
   }
   .contact-card .icon {
@@ -363,50 +247,20 @@
   .contact-card h3 { font-size: 18px; margin-bottom: 4px; color: var(--ink); }
   .contact-card p { font-size: 15px; margin: 0; }
 
-  /* ---------- Footer / Impressum ---------- */
-  footer {
-    background: var(--blue-deep);
-    color: rgba(255,255,255,0.75);
-    padding: 64px 0 40px;
-    font-size: 14px;
-  }
-  footer h4 {
-    font-family: 'Caveat Brush', cursive;
-    color: var(--yellow);
-    font-size: 32px;
-    margin: 0 0 14px;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-  }
-  footer .imp-grid {
-    display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 40px;
-  }
-  @media (max-width: 760px) { footer .imp-grid { grid-template-columns: 1fr; gap: 28px; } }
-  footer p { color: rgba(255,255,255,0.75); font-size: 14px; line-height: 1.7; }
-  footer a { color: var(--yellow); }
-
   /* ---------- Mobile (≤640px) ---------- */
   @media (max-width: 640px) {
-    .wrap { padding: 0 20px; }
     nav.top { padding: 18px 0; }
-    .brand-mark { width: 36px; height: 36px; font-size: 19px; }
-    .brand-text { font-size: 22px; }
-    .brand-text small { font-size: 9.5px; letter-spacing: 0.12em; margin-top: 3px; }
 
     .hero { padding: 30px 0 50px; }
     .hero h1 { font-size: clamp(32px, 9.5vw, 48px); margin-bottom: 8px; max-width: 100%; }
-    .hero .lede { font-size: 16px; }
-    .hero-cta { margin-top: 22px; }
-    .wave { height: 32px; }
-    .wave + section { padding-top: 18px; }
     .hero .lede { font-size: 17px; }
     .hero-cta { gap: 10px; margin-top: 28px; }
+    .wave { height: 32px; }
     .btn { padding: 12px 22px; font-size: 14px; }
 
     section { padding: 60px 0; }
     h2 { font-size: clamp(36px, 9vw, 48px); }
     h3 { font-size: 26px; }
-    .eyebrow { font-size: 24px; }
 
     .about-grid { gap: 32px; }
     .stat-card { padding: 22px; }
@@ -427,22 +281,7 @@
     .iban-block .row .v { text-align: left; word-break: break-word; }
 
     .contact-grid { gap: 22px; margin-top: 28px; }
-
-    footer { padding: 50px 0 30px; }
   }
-  footer .legal { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.15); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13px; color: rgba(255,255,255,0.55); }
-
-  /* Underline doodle on hand-text */
-  .doodle-underline { position: relative; display: inline-block; }
-  .doodle-underline::after {
-    content: ''; position: absolute; left: 0; right: 0; bottom: -8px;
-    height: 8px;
-    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 10'><path d='M2 7 Q 50 1 100 5 T 198 4' stroke='%23FFD23F' stroke-width='4' fill='none' stroke-linecap='round'/></svg>") no-repeat center / 100% 100%;
-  }
-
-  /* Skip-link a11y */
-  .skip { position: absolute; left: -9999px; }
-  .skip:focus { left: 12px; top: 12px; background: var(--blue); color: #fff; padding: 8px 14px; border-radius: 6px; z-index: 100; }
 </style>
 
 </head>
@@ -474,7 +313,7 @@
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
   <svg class="hero-blob" viewBox="0 0 1440 700" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M 0 0 L 1440 0 L 1440 660 Q 1280 720 1100 695 Q 920 670 760 700 Q 600 730 420 700 Q 240 670 0 720 L 0 0 Z" fill="#FFE94A"></path>
+    <path d="M 0 0 L 1440 0 L 1440 380 Q 1340 480 1180 440 Q 1020 400 880 480 Q 720 560 540 510 Q 360 460 200 540 Q 60 600 0 560 L 0 0 Z" fill="#FFE94A"></path>
   </svg>
   <div class="wrap">
     <h1>Heute Zirkus, <br><span class="accent">morgen Theater?</span></h1>
@@ -502,8 +341,6 @@
         <p>
           Ob Zirkuswoche, Theaterbesuche, Ausflüge oder das Musikmobil – viele dieser besonderen Angebote für unsere Kinder wären ohne Förderverein nicht möglich.
         </p>
-        <p>
-</p>
       </div>
       <div>
         <div class="stat-card">
@@ -602,7 +439,7 @@
         <p style="font-size: 13px; color: var(--ink-soft); margin-top: 18px; line-height: 1.5;">Die genauen Modalitäten – Beitragshöhe, Zahlungsweise, Kündigung – findet ihr auf dem Antragsformular.</p>
 
         <div style="display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap;">
-          <a class="btn btn-primary" href="beitrittserklaerung.html?stand=2026-06" target="_blank">📄 Mitgliedsantrag</a>
+          <a class="btn btn-primary" href="beitrittserklaerung.html" target="_blank" rel="noopener">📄 Mitgliedsantrag</a>
         </div>
       </div>
 
@@ -663,7 +500,7 @@
 <div class="contact-grid">
       <div class="contact-card">
         <div class="icon" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B2C9C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
         </div>
         <h3>E-Mail</h3>
         <p><a href="mailto:foerderverein.kiz96@gmail.com">foerderverein.kiz96@gmail.com</a></p>
@@ -671,7 +508,7 @@
 
       <div class="contact-card">
         <div class="icon" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="14" rx="2"></rect><path d="M4 10h16"></path><path d="M9 14h2"></path></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B2C9C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="14" rx="2"></rect><path d="M4 10h16"></path><path d="M9 14h2"></path></svg>
         </div>
         <h3>Grüner Briefkasten</h3>
         <p>Im Eingangsbereich der Kita findet ihr unseren grünen Briefkasten – für Mitgliedsanträge, Notizen und alles, was ihr uns zukommen lassen möchtet.</p>
@@ -734,178 +571,5 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-
-<!-- ============ TWEAKS ============ -->
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-
-<style id="tweak-styles">
-  /* Brush-Level: kontrolliert die Schriftart der Headlines */
-  body[data-brush="poliert"] h1,
-  body[data-brush="poliert"] h2,
-  body[data-brush="poliert"] h3,
-  body[data-brush="poliert"] .eyebrow,
-  body[data-brush="poliert"] .stat-num,
-  body[data-brush="poliert"] .price,
-  body[data-brush="poliert"] .panel h3,
-  body[data-brush="poliert"] .project h3,
-  body[data-brush="poliert"] .brand-text,
-  body[data-brush="poliert"] footer h4,
-  body[data-brush="poliert"] .steps li::before {
-    font-family: 'Poppins', sans-serif !important;
-    font-weight: 700 !important;
-    letter-spacing: -0.01em !important;
-  }
-  body[data-brush="poliert"] .hero h1 { font-size: clamp(48px, 7vw, 84px) !important; line-height: 1.05 !important; }
-  body[data-brush="poliert"] .price { font-size: 56px !important; }
-  body[data-brush="poliert"] .stat-num { font-size: 44px !important; }
-  body[data-brush="poliert"] .panel h3 { font-size: 32px !important; }
-  body[data-brush="poliert"] .project h3 { font-size: 24px !important; }
-  body[data-brush="poliert"] .brand-text { font-size: 19px !important; }
-  body[data-brush="poliert"] .eyebrow { font-size: 13px !important; text-transform: uppercase; letter-spacing: 0.12em !important; font-weight: 600 !important; }
-  body[data-brush="poliert"] footer h4 { font-size: 16px !important; text-transform: uppercase; letter-spacing: 0.1em !important; font-weight: 600 !important; }
-
-  body[data-brush="marker"] h1,
-  body[data-brush="marker"] h2,
-  body[data-brush="marker"] .hero h1,
-  body[data-brush="marker"] .panel h3,
-  body[data-brush="marker"] .project h3,
-  body[data-brush="marker"] .brand-text {
-    font-family: 'Permanent Marker', cursive !important;
-    letter-spacing: 0.005em !important;
-  }
-
-  body[data-brush="kindlich"] h1,
-  body[data-brush="kindlich"] h2,
-  body[data-brush="kindlich"] .hero h1,
-  body[data-brush="kindlich"] .panel h3,
-  body[data-brush="kindlich"] .project h3,
-  body[data-brush="kindlich"] .brand-text,
-  body[data-brush="kindlich"] .eyebrow,
-  body[data-brush="kindlich"] .stat-num,
-  body[data-brush="kindlich"] .price,
-  body[data-brush="kindlich"] footer h4 {
-    font-family: 'Patrick Hand', cursive !important;
-    letter-spacing: 0.005em !important;
-  }
-
-  /* Farb-Stimmung */
-  body[data-mood="sonnig"] section.alt { background: #FFE94A; }
-  body[data-mood="sonnig"] .hero-blob path { fill: #FFE94A !important; }
-  body[data-mood="sonnig"] .panel.blue { background: #1B2C9C; }
-
-  body[data-mood="marine"] section.alt { background: #1B2C9C; color: #fff; }
-  body[data-mood="marine"] section.alt h2,
-  body[data-mood="marine"] section.alt h3,
-  body[data-mood="marine"] section.alt .eyebrow,
-  body[data-mood="marine"] section.alt .stat-num,
-  body[data-mood="marine"] section.alt .project h3 { color: #FFDA29 !important; }
-  body[data-mood="marine"] section.alt p { color: rgba(255,255,255,0.85); }
-  body[data-mood="marine"] section.alt strong { color: #fff; }
-  body[data-mood="marine"] section.alt .stat-card,
-  body[data-mood="marine"] section.alt .project { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.15); }
-  body[data-mood="marine"] section.alt .panel { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.15); }
-  body[data-mood="marine"] section.alt .panel h3,
-  body[data-mood="marine"] section.alt .panel p { color: #fff; }
-  body[data-mood="marine"] section.alt .panel.blue { background: #FFDA29; }
-  body[data-mood="marine"] section.alt .panel.blue h3,
-  body[data-mood="marine"] section.alt .panel.blue p,
-  body[data-mood="marine"] section.alt .panel.blue strong,
-  body[data-mood="marine"] section.alt .panel.blue .eyebrow { color: #14216E !important; }
-  body[data-mood="marine"] .hero-blob path { fill: #DDE3FF !important; }
-  body[data-mood="marine"] .wave path { fill: #FFFDF6 !important; }
-
-  body[data-mood="ruhig"] section.alt { background: #FFF4B8; }
-  body[data-mood="ruhig"] .hero-blob path { fill: #FFF1A8 !important; }
-
-  /* Wellen / Formen */
-  body[data-shapes="gerade"] .wave { display: none !important; }
-  body[data-shapes="gerade"] .hero-blob path {
-    d: path('M 0 0 L 1440 0 L 1440 720 L 0 720 Z') !important;
-  }
-  body[data-shapes="gerade"] section { padding-top: 70px !important; padding-bottom: 70px !important; }
-  body[data-shapes="gerade"] .panel,
-  body[data-shapes="gerade"] .project,
-  body[data-shapes="gerade"] .stat-card,
-  body[data-shapes="gerade"] .contact-card {
-    border-radius: 4px !important;
-  }
-  body[data-shapes="gerade"] .btn { border-radius: 4px !important; }
-  body[data-shapes="gerade"] .doodle-underline::after { display: none !important; }
-
-  body[data-shapes="extra"] .hero-blob path {
-    d: path('M 0 0 L 1440 0 L 1440 380 Q 1340 480 1180 440 Q 1020 400 880 480 Q 720 560 540 510 Q 360 460 200 540 Q 60 600 0 560 L 0 0 Z') !important;
-  }
-  body[data-shapes="extra"] .panel,
-  body[data-shapes="extra"] .project,
-  body[data-shapes="extra"] .stat-card,
-  body[data-shapes="extra"] .contact-card {
-    border-radius: 32px !important;
-  }
-</style>
-
-<div id="tweak-root"></div>
-<script type="text/babel">
-  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-    "brush": "brush",
-    "mood": "sonnig",
-    "shapes": "extra"
-  }/*EDITMODE-END*/;
-
-  function TweaksApp() {
-    const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
-    React.useEffect(() => {
-      document.body.dataset.brush = t.brush;
-      document.body.dataset.mood = t.mood;
-      document.body.dataset.shapes = t.shapes;
-    }, [t.brush, t.mood, t.shapes]);
-
-    return (
-      <TweaksPanel title="Tweaks">
-        <TweakSection label="Schrift-Charakter" />
-        <TweakRadio
-          label="Headlines"
-          value={t.brush}
-          options={[
-            { value: 'kindlich', label: 'Kindlich' },
-            { value: 'brush', label: 'Brush' },
-            { value: 'marker', label: 'Marker' },
-            { value: 'poliert', label: 'Poliert' },
-          ]}
-          onChange={(v) => setTweak('brush', v)}
-        />
-        <TweakSection label="Farb-Stimmung" />
-        <TweakRadio
-          label="Mood"
-          value={t.mood}
-          options={[
-            { value: 'ruhig', label: 'Ruhig' },
-            { value: 'klassisch', label: 'Klassisch' },
-            { value: 'sonnig', label: 'Sonnig' },
-            { value: 'marine', label: 'Marine' },
-          ]}
-          onChange={(v) => setTweak('mood', v)}
-        />
-        <TweakSection label="Formensprache" />
-        <TweakRadio
-          label="Sektionen"
-          value={t.shapes}
-          options={[
-            { value: 'gerade', label: 'Klar' },
-            { value: 'wellen', label: 'Wellen' },
-            { value: 'extra', label: 'Verspielt' },
-          ]}
-          onChange={(v) => setTweak('shapes', v)}
-        />
-      </TweaksPanel>
-    );
-  }
-
-  ReactDOM.createRoot(document.getElementById('tweak-root')).render(<TweaksApp />);
-</script>
-
-
 
 </body></html>
