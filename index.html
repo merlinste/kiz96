@@ -238,26 +238,32 @@
   .iban-block .row .k { color: rgba(255,255,255,0.6); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
   .iban-block .row .v { color: #fff; font-weight: 600; text-align: right; }
 
-  .iban-with-qr {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 20px;
-    align-items: stretch;
-  }
-  .iban-with-qr .iban-block { margin: 0; flex: 1; }
   .iban-qr {
-    background: transparent;
-    border-radius: 12px;
-    padding: 6px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 150px;
+    gap: 18px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 12px 0 0;
   }
-  .iban-qr img { width: 100%; height: auto; display: block; }
+  .iban-qr img { width: 140px; height: auto; display: block; flex-shrink: 0; }
+  .iban-qr-title {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 27px;
+    line-height: 1;
+    color: var(--blue);
+    margin-bottom: 7px;
+  }
+  .iban-qr-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
   @media (max-width: 540px) {
-    .iban-with-qr { grid-template-columns: 1fr; }
-    .iban-qr { width: 140px; margin: 0 auto; }
+    .iban-qr { flex-direction: column; text-align: center; gap: 14px; padding: 20px; }
+    .iban-qr img { width: 148px; }
   }
 
   /* ---------- Vorstand ---------- */
@@ -611,6 +617,14 @@
           <div class="row"><span class="k">IBAN</span><span class="v">DE16 5019 0000 6001 1012 67</span></div>
           <div class="row"><span class="k">BIC</span><span class="v">FFVBDEFF</span></div>
           <div class="row"><span class="k">Bank</span><span class="v">Frankfurter Volksbank</span></div>
+        </div>
+
+        <div class="iban-qr">
+          <img src="images/spenden-qr.svg" alt="GiroCode zum Scannen mit der Banking-App – überträgt Empfänger, IBAN und BIC des Fördervereins automatisch in die Überweisung.">
+          <div>
+            <div class="iban-qr-title">Scannen &amp; spenden</div>
+            <div class="iban-qr-sub">Code mit eurer Banking-App scannen – Empfänger, IBAN und BIC werden automatisch übernommen. Den Betrag gebt ihr selbst ein.</div>
+          </div>
         </div>
 
         <p style="margin-top: 14px; font-size: 13px; line-height: 1.55; color: rgba(255,255,255,0.75);">
