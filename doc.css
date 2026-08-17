@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Förderverein KiZ 96 – Layout für die Dokumentseiten
+   Wird von satzung.html und datenschutz.html geladen (zusätzlich zu styles.css).
+   ========================================================================== */
+
+/* ---------- Kopfbereich ---------- */
+.doc-head {
+  position: relative;
+  padding: 56px 0 64px;
+  overflow: hidden;
+  background: var(--yellow-bg);
+}
+.doc-head .wrap { position: relative; z-index: 1; }
+.doc-head h1 {
+  font-size: clamp(44px, 7vw, 76px);
+  max-width: 18ch;
+  margin-bottom: 16px;
+  line-height: 0.95;
+}
+.doc-head p { color: var(--ink); max-width: 620px; margin-bottom: 0; }
+.doc-head .stand {
+  display: inline-block;
+  margin-top: 20px;
+  background: rgba(255,253,246,0.85);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--blue-deep);
+  letter-spacing: 0.02em;
+}
+.wave { display: block; width: 100%; height: 60px; }
+
+/* ---------- Dokument ---------- */
+.doc { padding: 20px 0 90px; }
+.doc .wrap { max-width: 820px; }
+.doc section { margin-top: 48px; scroll-margin-top: 90px; }
+.doc section:first-of-type { margin-top: 24px; }
+.doc h2 {
+  font-size: 38px;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+/* Größe/Form der Nummern-Plakette setzt die jeweilige Seite:
+   datenschutz.html = runder Kreis, satzung.html = Pille für „§ 4a“. */
+.doc h2 .num {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  background: var(--yellow);
+  color: var(--blue-deep);
+  border-radius: 999px;
+  height: 30px;
+  display: inline-grid; place-items: center;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.doc ul { margin: 0 0 1em; padding: 0; list-style: none; max-width: var(--readw); }
+.doc ul li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 8px;
+  color: var(--ink-soft);
+}
+.doc ul li::before {
+  content: '';
+  position: absolute;
+  left: 4px; top: 11px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 0 0 2px rgba(27,44,156,0.18);
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 26px 28px;
+  max-width: var(--readw);
+}
+.card p:last-child, .card ul:last-child, .card ol:last-child { margin-bottom: 0; }
+.backlink { display: inline-block; margin-top: 56px; font-size: 15px; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .doc-head { padding: 36px 0 44px; }
+  .doc-head h1 { font-size: clamp(34px, 9vw, 48px); }
+  .wave { height: 32px; }
+  .doc { padding: 10px 0 60px; }
+  .doc section { margin-top: 38px; }
+  .doc h2 { font-size: 30px; gap: 10px; }
+  .card { padding: 22px 20px; }
+}
+
+@media print {
+  nav.top, .wave, .backlink, .toc { display: none; }
+  body { font-size: 12pt; background: #fff; }
+  .doc-head { background: #fff; padding: 0 0 24px; }
+  .doc section { break-inside: avoid; }
+  footer { background: #fff; color: #333; padding: 24px 0 0; }
+  footer h4, footer a { color: #14216E; }
+}
